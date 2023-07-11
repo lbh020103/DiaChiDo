@@ -42,7 +42,7 @@ const Heading = () => {
               onClick={() => setIsOpen(false)}
               className="px-4 py-3 hover:bg-neutral-100 trasition font-semibold"
             >
-              Di tích Hầm Hân
+              Di tích Hầm Hấn
             </Link>
 
             <Link
@@ -50,7 +50,7 @@ const Heading = () => {
               onClick={() => setIsOpen(false)}
               className="px-4 py-3 hover:bg-neutral-100 trasition font-semibold"
               >
-              Di tích Mỹ Dân
+              Di tích Mỹ Duân
             </Link>
 
             <Link
