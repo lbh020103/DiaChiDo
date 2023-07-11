@@ -1,4 +1,6 @@
-import React from "react";
+'use client'
+
+import React, { useEffect } from "react";
 import Image from "next/image";
 
 import img1 from "@/public/assets/nghiatrang/img1.jpg";
@@ -8,18 +10,27 @@ import img4 from "@/public/assets/nghiatrang/img4.jpg";
 import img5 from "@/public/assets/nghiatrang/img5.jpg";
 import img6 from "@/public/assets/nghiatrang/img6.jpg";
 
+// Import Aos
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const page = () => {
+  // useEffect to set animation duration
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div>
       <div className=" flex justify-center ">
         <div className="xl:container flex-col mb-10 lg:px-40 px-5 max-[426px]:px-2 leading-6">
-          <h1 className="font-bold flex justify-center py-5 text-3xl">
+          <h1 className="font-bold flex justify-center py-5 text-3xl" data-aos='fade-up' data-aos-duration="1000">
             GIỚI THIỆU VỀ NGHĨA TRANG LIỆT SỸ XÃ DUY PHƯỚC
           </h1>
 
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
             <div>
-              <p className="font-semibold">
+              <p className="font-semibold" data-aos='fade-up' data-aos-duration="1000">
                 Nghĩa trang Liệt sỹ xã Duy Phước được xây dựng từ năm 1977, tại
                 thôn Lang Châu Bắc, xã Duy Phước, gần Quốc lộ 1A và trên tuyến
                 đường Trường Sa. Qua nhiều lần nâng cấp, mở rộng khuôn viên, đến
@@ -36,15 +47,16 @@ const page = () => {
                 src={img1}
                 alt="img1"
                 className="xl:flex xl:justify-center h-max w-full"
+                data-aos='fade-up' data-aos-duration="1000"
               />
               <br />
-              <span className="italic pb-3 flex justify-center">
+              <span className="italic pb-3 flex justify-center" data-aos='fade-up' data-aos-duration="1000">
                 *Hình ảnh nghĩa trang nhìn từ phía trước.
               </span>
             </div>
           </div>
 
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Nghĩa trang Liệt sỹ xã Duy Phước bao gồm các hạng mục công trình
             Tượng đài Tổ quốc ghi công, Phù điêu khắc họa hình ảnh cán bộ, chiến
             sỹ và Nhân dân Duy Phước đứng lên đấu tranh chống lại quân thù thể
@@ -55,7 +67,7 @@ const page = () => {
           </p>
           <br />
 
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Sau bức phù điêu được bố trí 17 dãy mộ các Mẹ Việt Nam Anh Hùng, Anh
             Hùng Liệt sỹ và bồn hoa cây cảnh, lối đi… Phía trước tượng đài là
             cổng và đường vào nghĩa trang, 2 bên được bố trí hồ trồng sen và cây
@@ -73,29 +85,34 @@ const page = () => {
               src={img2}
               alt="img2"
               className="flex justify-center pt-2 w-full object-contain"
+              data-aos='zoom-in' data-aos-duration="1000"
             />
             <Image
               src={img3}
               alt="img3"
               className="flex justify-center pt-2 w-full object-contain"
+              data-aos='zoom-in' data-aos-duration="1000"
             />
             <Image
               src={img4}
               alt="img4"
               className="flex justify-center pt-2 w-full object-contain"
+              data-aos='zoom-in' data-aos-duration="1000"
             />
             <Image
               src={img5}
               alt="img5"
               className="flex justify-center pt-2 w-full object-contain"
+              data-aos='zoom-in' data-aos-duration="1000"
             />
             <Image
               src={img6}
               alt="img6"
               className="flex justify-center pt-2 w-full object-contain"
+              data-aos='zoom-in' data-aos-duration="1000"
             />
           </div>
-          <span className="mb-24 italic flex justify-center">
+          <span className="mb-24 italic flex justify-center" data-aos='fade-up' data-aos-duration="1000">
             Một số hình ảnh về nghĩa trang liệt sĩ xã Duy Phước
           </span>
         </div>

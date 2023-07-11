@@ -1,4 +1,6 @@
-import React from "react";
+'use client'
+
+import React, { useEffect } from "react";
 
 import img1 from "@/public/assets/myduan/img1.jpg";
 import img2 from "@/public/assets/myduan/img2.jpg";
@@ -9,18 +11,27 @@ import img6 from "@/public/assets/myduan/img6.jpg";
 import img7 from "@/public/assets/myduan/img7.jpg";
 import Image from "next/image";
 
+// Import Aos
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const page = () => {
+  // useEffect to set animation duration
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div>
       <div className=" flex justify-center ">
         <div className="xl:container flex-col mb-10 lg:px-40 px-5 max-[426px]:px-2 leading-6">
-          <h1 className="font-bold flex justify-center py-5 text-3xl">
+          <h1 className="font-bold flex justify-center py-5 text-3xl" data-aos='fade-up' data-aos-duration="1000">
             Di tích: Vụ thảm sát Mỹ Duân
           </h1>
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5" >
             <div>
-              <p className="font-semibold">
+              <p className="font-semibold" data-aos='fade-up' data-aos-duration="1000">
                 Xã Duy Phước của huyện Duy Xuyên ngày nay, trong thời kỳ kháng
                 chiến chống Mỹ, là địa bàn của hai xã Xuyên Quang và Xuyên Thái.
                 Xã Xuyên Quang bao gồm các làng Lang Châu, Gia Tịnh, Câu Lâu, Mỹ
@@ -29,7 +40,7 @@ const page = () => {
                 thuộc thôn Mỹ Phước.
               </p>
               <br />
-              <p className="pb-3">
+              <p className="pb-3" data-aos='fade-up' data-aos-duration="1000">
                 Làng Mỹ Duân trước đây là nơi đã xảy ra vụ thảm sát tập thể 14
                 người dân vô tội do quân Nam Triều Tiên gây ra trong những ngày
                 đầu Xuân Mậu Thân 1968.
@@ -41,16 +52,17 @@ const page = () => {
                 src={img1}
                 alt="img1"
                 className="xl:flex xl:justify-center h-max w-full"
+                data-aos='fade-up' data-aos-duration="1000"
               />
               <br />
-              <span className="italic pb-3 flex justify-center">
+              <span className="italic pb-3 flex justify-center" data-aos='fade-up' data-aos-duration="1000">
                 Toàn cảnh bia DT Vụ Thảm sát Mỹ Duân
               </span>
             </div>
             <br />
           </div>
 
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000"> 
             Đầu năm 1967, hai tiểu đoàn quân Nam Triều Tiên vào đóng quân ở Lang
             Châu, Câu Lâu thuộc xã Xuyên Quang. Ban đầu chúng tập trung xây dựng
             công sự, chốt điểm đóng quân và lập trận địa pháo để bắn hỗ trợ cho
@@ -70,13 +82,14 @@ const page = () => {
             src={img2}
             alt="img2"
             className="flex justify-center pt-2 w-full"
+            data-aos='fade-up' data-aos-duration="1000"
           />
-          <span className="italic pb-3 flex justify-center">
+          <span className="italic pb-3 flex justify-center" data-aos='fade-up' data-aos-duration="1000">
             *Hình ảnh minh hoạ
           </span>
 
           <br />
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Trước thực tế tình hình đó, lực lượng bộ đội V25 của tỉnh, bộ đội
             huyện đã tăng cường hỗ trợ cùng du kích các xã Xuyên Quang, Xuyên
             Thái phá thế kìm kẹp của quân địch. Có sự hỗ trợ của cấp trên, cán
@@ -85,7 +98,7 @@ const page = () => {
             chiến trường.
           </p>
 
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Hội nghị Bộ Chính trị tháng 12/1967 và Hội nghị Trung ương lần thứ
             14 tháng 01/1968 đề ra chủ trương động viên sự nỗ lực của toàn Đảng,
             toàn quân, toàn dân nhằm thực hiện chiến dịch Tổng công kích giành
@@ -100,7 +113,7 @@ const page = () => {
 
           <br />
 
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Quân Nam Triều Tiên đóng tại các xã Xuyên Quang, Xuyên Thái bị tổn
             thất bởi các trận đánh chớp nhoáng của lực lượng cách mạng nhưng
             không ngăn cản được nên vô cùng căm hận, nuôi ý định trả thù. Không
@@ -115,13 +128,14 @@ const page = () => {
             src={img3}
             alt="img3"
             className="flex justify-center pt-2 w-full"
+            data-aos='fade-up' data-aos-duration="1000"
           />
-          <span className="italic pb-3 flex justify-center">
+          <span className="italic pb-3 flex justify-center" data-aos='fade-up' data-aos-duration="1000">
             *Hình ảnh minh hoạ
           </span>
           <br />
 
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Một tiểu đoàn quân Rồng Xanh đã xây dựng đồn ở làng Triều Châu, lập
             thêm đồn bên cạnh đồn Liên Đại( Duy Vinh) cùng với hai đồn đã có
             trên địa bàn là Lang Châu, Câu Lâu án ngữ vùng hành lang trên trục
@@ -135,13 +149,14 @@ const page = () => {
             src={img4}
             alt="img4"
             className="flex justify-center pt-2 w-full"
+            data-aos='fade-up' data-aos-duration="1000"
           />
-          <span className="italic pb-3 flex justify-center">
+          <span className="italic pb-3 flex justify-center" data-aos='fade-up' data-aos-duration="1000">
             *Hình ảnh minh hoạ
           </span>
           <br />
 
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Sau cuộc Tổng công kích Xuân Mậu Thân 1968, quân Nam Triều Tiên và
             quân ngụy tăng cường đánh phá vào địa bàn. Theo chỉ đạo của Huyện
             ủy, các xã Xuyên Quang, Xuyên Thái tập trung xây dựng, củng cố và
@@ -156,7 +171,7 @@ const page = () => {
           </p>
           <br />
 
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Ngày 03/02/1968, quân Nam Triều Tiên đã tổ chức cuộc càn quét vào
             khu vực Xóm Chùa, thôn Mỹ Duân. Do không có sự chuẩn bị trước nên bà
             con nhân dân trong xóm vô cùng hoảng loạn khi chúng đến gần kề. Họ
@@ -169,12 +184,13 @@ const page = () => {
             src={img5}
             alt="img5"
             className="flex justify-center pt-2 w-full"
+            data-aos='fade-up' data-aos-duration="1000"
           />
-          <span className="italic pb-3 flex justify-center">
+          <span className="italic pb-3 flex justify-center" data-aos='fade-up' data-aos-duration="1000">
             *Hình ảnh minh hoạ
           </span>
           <br />
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Hành động tội ác này đã không khuất phục được phong trào cách mạng
             mà lại thổi bùng lên ý chí, lòng căm thù sâu sắc trong cán bộ, đảng
             viên và nhân dân cả xã, cả huyện. Lực lượng du kích Xuyên Quang,
@@ -188,11 +204,12 @@ const page = () => {
             src={img6}
             alt="img6"
             className="flex justify-center pt-2 w-full"
+            data-aos='fade-up' data-aos-duration="1000"
           />
-          <span className="italic pb-3 flex justify-center">
+          <span className="italic pb-3 flex justify-center" data-aos='fade-up' data-aos-duration="1000">
             Tấm bia đá khắc ghi nội dung tại bia DT Vụ thảm sát Mỹ Duân
           </span>
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Duy Phước ngày nay là một xã nông thôn mới, văn minh và hiện đại.
             Gác lại quá khứ để hướng đến tương lai nhưng những mất mát đau
             thương một thời vẫn cứ âm ỉ rỉ máu trong trái tim các thân nhân của
@@ -202,7 +219,7 @@ const page = () => {
           </p>
           <br />
 
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Vụ thảm sát tại Xóm Chùa, làng Mỹ Duân đã đi qua 50 năm nhưng những
             mất mát, đau thương, tang tóc cho đến nay vẫn chưa thể xóa nhòa
             trong tâm trí của nhiều người dân các xã Xuyên Quang, Xuyên Thái
@@ -218,8 +235,9 @@ const page = () => {
             src={img7}
             alt="img7"
             className="flex justify-center pt-2 w-full"
+            data-aos='fade-up' data-aos-duration="1000"
           />
-          <span className="italic mb-16 flex justify-center">
+          <span className="italic mb-16 flex justify-center" data-aos='fade-up' data-aos-duration="1000"> 
             Ngày khởi công xây dựng công trình di tích
           </span>
           <br />

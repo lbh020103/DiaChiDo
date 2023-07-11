@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Image from "next/image";
 
 import img1 from "@/public/assets/hamhan/img1.png";
@@ -10,18 +12,27 @@ import img6 from "@/public/assets/hamhan/img6.jpg";
 import img7 from "@/public/assets/hamhan/img7.jpg";
 import img8 from "@/public/assets/hamhan/img8.jpg";
 
+// Import Aos
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const page = () => {
+  // useEffect to set animation duration
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div>
       <div className=" flex justify-center ">
-        <div className="xl:container flex-col mb-10 lg:px-40 px-5 max-[426px]:px-2 leading-6">
-          <h1 className="font-bold flex justify-center py-5 text-3xl">
+        <div className="xl:container flex-col mb-10 lg:px-40 px-5 max-[426px]:px-2 leading-6" >
+          <h1 className="font-bold flex justify-center py-5 text-3xl" data-aos='fade-up' data-aos-duration="1000">
             Di tích: Sự kiện hầm Hấn
           </h1>
 
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
-            <div>
-              <p className="font-semibold">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5" >
+            <div data-aos='fade-up' data-aos-duration="1000">
+              <p className="font-semibold" >
                 Năm 1954, sau hiệp định Genève, một số cán bộ của ta được phân
                 công ở lại đấu tranh với địch. Để đảm bảo cho cán bộ hoạt động,
                 nhân dân xóm lẻ vùng 7 thôn Lang Châu, xã Xuyên Quang đã đào hầm
@@ -31,7 +42,7 @@ const page = () => {
               </p>
               <br />
             </div>
-            <div>
+            <div data-aos='fade-up' data-aos-duration="1000">
               <Image
                 src={img1}
                 alt="img1"
@@ -44,7 +55,7 @@ const page = () => {
             </div>
           </div>
 
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Năm 1964, phong trào cách mạng phát triển mạnh và rộng khắp các địa
             phương, trong đó có các xã khu Đông huyện Duy Xuyên nhằm thực hiện
             chủ trương của Tỉnh ủy Quảng Đà và Huyện ủy Duy Xuyên về vận động
@@ -64,13 +75,14 @@ const page = () => {
             src={img2}
             alt="img2"
             className="flex justify-center pt-2 w-full"
+            data-aos='fade-up' data-aos-duration="1000"
           />
-          <span className="italic pb-3 flex justify-center">
+          <span className="italic pb-3 flex justify-center" data-aos='fade-up' data-aos-duration="1000">
             *Hình ảnh minh hoạ
           </span>
 
           <br />
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Địch điên cuồng tìm mọi cách để dập tắt phong trào cách mạng nơi
             đây. Chúng ra sức bắt bớ đánh đập, buộc nhân dân phải chỉ nơi trú ẩn
             của các đồng chí cán bộ của ta, nhưng cơ sở và các người thân trong
@@ -80,7 +92,7 @@ const page = () => {
 
           <br />
 
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000"> 
             Thực hiện chủ trương đồng khởi của Ban Thường vụ Khu ủy Khu V và sự
             chỉ đạo của cấp trên, đêm 9/6/1964, các đồng chí Huyện ủy phụ trách
             khu Đông triệu tập cuộc họp gồm bí thư các xã trong vùng tại nhà ông
@@ -95,7 +107,7 @@ const page = () => {
 
           <br />
 
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Khi đến nhà ông Trương Kiện, nơi có hầm bà Hấn (bà Hấn là con gái
             của ông Trương Kiện), thấy có dấu hiệu khả nghi, chúng liền triển
             khai lực lượng tìm hầm. Đến chuồng trâu, chúng yêu cầu thả trâu ra
@@ -111,7 +123,7 @@ const page = () => {
           </p>
           <br />
 
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Từ đó, chúng tiếp tục phát hiện ra hai hầm của ông Trương Cáo và
             Đặng Điệp, vì thế các đồng chí trong hầm đều phải nhảy ra khỏi hầm
             để chiến đấu chống lại. Hai đồng chí hy sinh, riêng đồng chí Nguyễn
@@ -120,7 +132,7 @@ const page = () => {
           </p>
           <br />
 
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Sự hy sinh dũng cảm của các đồng chí cán bộ huyện và cô Trương Thị
             Hiểu đã để lại niềm thương tiếc và kính phục trong lòng nhân dân các
             xã Xuyên Quang, Xuyên Thái (nay là xã Duy Phước) và nhân dân toàn
@@ -132,13 +144,14 @@ const page = () => {
             src={img3}
             alt="img3"
             className="flex justify-center pt-2 w-full"
+            data-aos='fade-up' data-aos-duration="1000"
           />
-          <span className="italic pb-3 flex justify-center">
+          <span className="italic pb-3 flex justify-center" data-aos='fade-up' data-aos-duration="1000">
             Địa điểm Di tích sự kiệm hầm Hấn
           </span>
           <br />
 
-          <p>
+          <p data-aos='fade-up' data-aos-duration="1000">
             Di tích sự kiện hầm Hấn đã được Uỷ ban nhân dân tỉnh Quảng Nam ban
             hành Quyết định số: 135/QĐ/UBND, ngày 10/01/2008, xếp hạng di tích
             lịch sử cấp tỉnh
@@ -150,24 +163,28 @@ const page = () => {
               src={img4}
               alt="img4"
               className="flex justify-center pt-2 w-full object-contain"
+              data-aos='zoom-in' data-aos-duration="1000"
             />
             <Image
               src={img5}
               alt="img5"
               className="flex justify-center pt-2 w-full object-contain"
+              data-aos='zoom-in' data-aos-duration="1000"
             />
             <Image
               src={img7}
               alt="img7"
               className="flex justify-center pt-2 w-full object-contain"
+              data-aos='zoom-in' data-aos-duration="1000"
             />
             <Image
               src={img8}
               alt="img8"
               className="flex justify-center pt-2 w-full object-contain"
+              data-aos='zoom-in' data-aos-duration="1000"
             />
           </div>
-          <span className="mb-24 italic flex justify-center">
+          <span className="mb-24 italic flex justify-center" data-aos='fade-up' data-aos-duration="1000">
             {" "}
             Một số hình ảnh Hầm Hấn
           </span>
