@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 
-import map from "@/public/assets/map.png";
+import map from "@/public/assets/map.jpg";
 import Image from "next/image";
 
 // Import Aos
